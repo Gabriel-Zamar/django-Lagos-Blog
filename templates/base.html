@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <title>Lagos Traffic</title>
+    <link href="https://fonts.googleapis.com/css?family=source+sans+pro:400" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+</head>
+<head>
+    <meta charset="UTF-8">
+    <title>Lagos Traffic</title>
+</head>
+<body>
+<div>
+<header>
+<div class="nav-left">
+<h1><a href="{% url 'home' %}">Lagos Traffic Blog</a></h1>
+</div>
+<div class="nav-right">
+<a href="{% url 'post_new' %}">+ Lagos Traffic</a>
+</div>
+</header>
+<header>
+    <h1><a href="{% url 'home'%}">New Blog Post</a> </h1>
+</header>
+    {% if user.is_authenticated %}
+<p>Welcome {{ user.username }}!</p>
+    <p><a href="{% url 'logout' %}">Log out</a></p>
+{% else %}
+<p>You are not logged in.</p>
+<a href="{% url 'login' %}">Log In</a>
+    {% endif %}
+</div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
