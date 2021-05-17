@@ -1,7 +1,7 @@
 from pathlib import Path
 from decouple import config
 import os
-import djange_heroku
+#import djange_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
