@@ -1,12 +1,9 @@
-
+/*
     DJANGO Admin styles
-
+*/
 
 @import url(fonts.css);
-/* static/css/base.css */
-header h1 a {
-color: red;
-}
+
 /* VARIABLE DEFINITIONS */
 :root {
   --primary: #79aec8;
